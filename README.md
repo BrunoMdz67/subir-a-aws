@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+# S3 Image Upload
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React component that allows you to select an image file and upload it to an Amazon S3 bucket using the AWS SDK.
 
-## Available Scripts
+## Prerequisites
 
-In the project directory, you can run:
+Before using this code, you need to have the following:
 
-### `npm start`
+- An Amazon S3 bucket set up
+- AWS credentials with appropriate access to the S3 bucket
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Install the required dependencies by running `npm install` or `yarn install`.
 
-### `npm test`
+2. Open the `ImageUploader.js` file.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Replace the placeholder values in the `accessKeyId`, `secretAccessKey`, `region`, and `Bucket` parameters with your own AWS credentials and S3 bucket information.
 
-### `npm run build`
+4. Run the application by running `npm start` or `yarn start`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. In your React application, import the `ImageUploader` component:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```jsx
+   import ImageUploader from './ImageUploader';
 
-### `npm run eject`
+Use the ImageUploader component in your code:
+'''
+function App() {
+  return (
+    <div>
+      <h1>My App</h1>
+      <ImageUploader />
+    </div>
+  );
+}
+'''
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Certainly! Here's an example of a README file for the S3 image upload code:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+markdown
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# S3 Image Upload
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This is a React component that allows you to select an image file and upload it to an Amazon S3 bucket using the AWS SDK.
 
-## Learn More
+## Prerequisites
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Before using this code, you need to have the following:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- An Amazon S3 bucket set up
+- AWS credentials with appropriate access to the S3 bucket
 
-### Code Splitting
+## Getting Started
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Install the required dependencies by running `npm install` or `yarn install`.
 
-### Analyzing the Bundle Size
+2. Open the `ImageUploader.js` file.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. Replace the placeholder values in the `accessKeyId`, `secretAccessKey`, `region`, and `Bucket` parameters with your own AWS credentials and S3 bucket information.
 
-### Making a Progressive Web App
+4. Run the application by running `npm start` or `yarn start`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Usage
 
-### Advanced Configuration
+1. In your React application, import the `ImageUploader` component:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+   ```jsx
+   import ImageUploader from './ImageUploader';
 
-### Deployment
+    Use the ImageUploader component in your code:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+    jsx
 
-### `npm run build` fails to minify
+    function App() {
+      return (
+        <div>
+          <h1>My App</h1>
+          <ImageUploader />
+        </div>
+      );
+    }
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    When the component is rendered, you will see a "Select Image" button. Click on it to open the file picker and choose an image file.
+
+    After selecting an image, you will see a preview of the image. Click on the "Upload Image" button to initiate the upload to your S3 bucket.
+
+    The uploaded image will be logged to the console. You can perform additional actions, such as updating the UI or storing the image URL, inside the handleImageUpload function.
+
+Customization
+
+You can customize the appearance of the buttons and the preview image by modifying the CSS in the ImageUploader.css file.
+
+Files in the AWS s3:
+
+![image](https://github.com/BrunoMdz67/subir-a-aws/assets/81934385/6d72150f-c43a-4b40-9ecd-bebe96f5ddc6)
+
+
