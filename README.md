@@ -1,46 +1,5 @@
-# S3 Image Upload
 
-This is a React component that allows you to select an image file and upload it to an Amazon S3 bucket using the AWS SDK.
 
-## Prerequisites
-
-Before using this code, you need to have the following:
-
-- An Amazon S3 bucket set up
-- AWS credentials with appropriate access to the S3 bucket
-
-## Getting Started
-
-1. Install the required dependencies by running `npm install` or `yarn install`.
-
-2. Open the `ImageUploader.js` file.
-
-3. Replace the placeholder values in the `accessKeyId`, `secretAccessKey`, `region`, and `Bucket` parameters with your own AWS credentials and S3 bucket information.
-
-4. Run the application by running `npm start` or `yarn start`.
-
-## Usage
-
-1. In your React application, import the `ImageUploader` component:
-
-   ```jsx
-   import ImageUploader from './ImageUploader';
-
-Use the ImageUploader component in your code:
-'''
-function App() {
-  return (
-    <div>
-      <h1>My App</h1>
-      <ImageUploader />
-    </div>
-  );
-}
-'''
-
-Certainly! Here's an example of a README file for the S3 image upload code:
-
-markdown
 
 # S3 Image Upload
 
