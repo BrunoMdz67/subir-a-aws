@@ -2,10 +2,11 @@ import React, { useState, useRef } from 'react';
 import AWS from 'aws-sdk';
 import './ImageUploader.css';
 
-
 const ImageUploader = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [previewImage, setPreviewImage] = useState(null);
+  const [error, setError] = useState('');
+
   const fileInputRef = useRef(null);
 
   const handleImageUpload = () => {
@@ -36,14 +37,20 @@ const ImageUploader = () => {
 
   const handleImageChange = (event) => {
     const file = event.target.files[0];
-    setSelectedImage(file);
 
-    // Preview image
-    const reader = new FileReader();
-    reader.onloadend = () => {
-      setPreviewImage(reader.result);
-    };
-    reader.readAsDataURL(file);
+    if (file && file.type.startsWith('image/')) {
+      setSelectedImage(file);
+      setError('');
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setPreviewImage(reader.result);
+      };
+      reader.readAsDataURL(file);
+    } else {
+      setSelectedImage(null);
+      setError('Please select an image file.');
+      setPreviewImage(null);
+    }
   };
 
   const handleSelectImage = () => {
@@ -69,6 +76,7 @@ const ImageUploader = () => {
       {previewImage && (
         <img src={previewImage} alt="Preview" style={{ width: '200px', height: 'auto' }} />
       )}
+      {error && <p>{error}</p>}
     </div>
   );
 };

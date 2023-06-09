@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css'
 import ImageUploader from './ImageUploader';
 import './ImageUploader.css'
+import FileUploader from './FileUploader';
 
 function App() {
 	return (
@@ -9,6 +10,8 @@ function App() {
 		
 		<h1>My App</h1>
 		<ImageUploader />
+		<h2>My App</h2>
+		<FileUploader />
 	  </div>
 	);
   }
